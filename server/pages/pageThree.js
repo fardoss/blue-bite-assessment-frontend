@@ -27,18 +27,6 @@ module.exports = {
             components: [2],
         },
         {
-            id: 3,
-            components: [14, 11, 7, 6],
-        },
-        {
-            id: 4,
-            components: [15, 12, 5, 7],
-        },
-        {
-            id: 5,
-            components: [16, 13, 6, 5],
-        },
-        {
             id: 6,
             components: [17],
         },
@@ -50,6 +38,18 @@ module.exports = {
             id: 8,
             components: [19],
         },
+        {
+            id: 3,
+            components: [14, 11, 7, 6],
+        },
+        {
+            id: 4,
+            components: [15, 12, 5, 7],
+        },
+        {
+            id: 5,
+            components: [16, 13, 6, 5],
+        }
     ],
     components: [
         {
@@ -208,5 +208,44 @@ module.exports = {
             type: 'image',
             options: VALUES.IMAGES[2],
         },
+        {
+            id: 20,
+            type: 'condition',
+            options: {
+                variable: 'location',
+                value: 'ny',
+            },
+            children: 6,
+        },
+        {
+            id: 21,
+            type: 'condition',
+            options: {
+                variable: 'location',
+                value: 'ca',
+            },
+            children: 7,
+        },
+        {
+            id: 22,
+            type: 'condition',
+            options: {
+                variable: 'location',
+                value: 'ch',
+            },
+            children: 8,
+        },
+
     ],
 };
+
+
+// CHANGES
+// I moved lists ids: 6. 7 and 8 to render the images between the show time and weather component
+// I needed to create 3 new conditions to render the images based on show_image and location
+
+// Initially, it was rendering the images in a different order, then figma
+// Initially, it showed all images regardless of location
+
+
+

@@ -7,6 +7,7 @@
 	margin-bottom:15px;
 	display:flex;
 	flex-direction:column;
+	cursor:pointer;
 	.title {
 		padding:20px;
 		font-size:25px;
@@ -19,7 +20,10 @@
 		padding:20px;
 		justify-content:flex-end;
 		img {
-			width:40px;
+			width:35px;
+			&.location {
+				width:25px;
+			}
 		}
 	}
 }

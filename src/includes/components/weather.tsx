@@ -7,7 +7,7 @@ import RainSVG from "../../icons/rain.svg";
 
 export function Weather(props: any){
 	let { data } = props;
-	const [ weather, setWeather ] = useState();
+	const [ weather, setWeather ] = useState<any>();
 
 	useEffect(() => {
 		getWeatherData();
@@ -34,7 +34,7 @@ export function Weather(props: any){
 			</div>
 			<div className="footer-wrap">
 				{
-					weather.upcomming.map(( weath, i) => {
+					weather.upcomming.map(( weath: any, i: any) => {
 						return (
 							<div key={i} className="upcoming-box-wrap">
 								<WeatherIcon condition={weath.condition} />
@@ -49,12 +49,20 @@ export function Weather(props: any){
 }
 
 
-function WeatherIcon({ condition }){
-	if (condition == "cloudy") {
-		return <img src={CloudSVG} />
-	} else if (condition == "rain") {
-		return <img src={RainSVG} />
+function WeatherIcon(props: any){
+	let { condition } = props;
+	if (condition === "cloudy") {
+		return <img src={CloudSVG} alt="cloudy icon" />
+	} else if (condition === "rain") {
+		return <img src={RainSVG} alt="rain icon" />
 	} else {
-		return <img src={ClearDaySVG} />
+		return <img src={ClearDaySVG} alt="clear day icon" />
 	}
 }
+
+
+
+
+
+
+
