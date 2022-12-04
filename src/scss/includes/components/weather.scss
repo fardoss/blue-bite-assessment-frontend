@@ -1,0 +1,56 @@
+.weather-component-wrapper {
+	width:400px;
+	background:#fff;
+	border-radius:20px;
+	border:1px solid #cfd6d9;
+	overflow:hidden;
+	margin-bottom:15px;
+	display: flex;
+	flex-direction: column;
+	.header-wrap {
+		display:flex;
+		align-items:flex-start;
+		justify-items: flex-start;
+		padding:20px 10px;
+		padding-bottom:0;
+		img {
+			width:70px;
+		}
+		.temperature-wrap {
+			flex:1;
+			.temperature {
+				font-size:35px;
+				line-height:1;
+				text-transform: uppercase;
+				margin-bottom:5px;
+			}
+			.condition {
+				font-size:14px;
+				line-height:1;
+			}
+		}
+		.location {
+			font-size:14px;
+		}
+	}
+	.footer-wrap {
+		display:flex;
+		align-items:flex-end;
+		justify-content:flex-end;
+		padding:10px;
+		padding-top:0;
+		.upcoming-box-wrap {
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			img {
+				width:50px;
+			}
+			.upcoming-day {
+				font-size:12px;
+			}
+		}
+	}
+}
+
+

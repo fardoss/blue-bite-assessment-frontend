@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './app';
 import {
     BrowserRouter as Router,
     Switch,
     Link,
     Route
 } from "react-router-dom";
+
+// layouts
+import App from './layouts/app';
+
+// scss
+import './scss/all.scss';
+
 
 const Root = () => (
     <div>
@@ -32,3 +37,5 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+

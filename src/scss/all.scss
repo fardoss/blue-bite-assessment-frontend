@@ -1,0 +1,17 @@
+@import "./layouts/app.scss";
+@import "./includes/components/image.scss";
+@import "./includes/components/weather.scss";
+@import "./includes/components/button.scss";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f3f3f3;
+}
+
+p {
+    margin:0;
+    padding:0;
+}
