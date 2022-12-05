@@ -11,6 +11,7 @@ export function Button(props: any){
 	if (!options) {
 		return null
 	}
+	
 	return (
 		<div 
 			className="button-component-wrapper"

@@ -18,6 +18,9 @@ export function transform(data){
 		list.components.forEach(comp => {
 			let index = data.components.findIndex(e => e.id === comp);
 			if (index >= 0) {
+
+				// conditions will be tagged as an object in their respective children list ids, 
+				// so we don't need to add them to the list components, (performance enhancement)
 				if (data.components[index].type !== "condition") {
 					new_list.components.push(data.components[index])
 				}
@@ -26,6 +29,7 @@ export function transform(data){
 		new_data.push(new_list);
 	})
 
+	// Map through each of the new data list components to tag conditions to each
 	new_data.forEach(list => {
 		let filtered = data.components.filter(e => e.children === list.id && e.type === "condition");
 		if (filtered.length >= 0) {
