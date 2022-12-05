@@ -56,7 +56,7 @@ module.exports = {
             id: 1,
             type: 'button',
             options: {
-                text: 'Show Time',
+                text: 'Show',
                 variable: 'show_image',
                 value: 'show',
             },
@@ -65,7 +65,7 @@ module.exports = {
             id: 2,
             type: 'button',
             options: {
-                text: 'Hide Time',
+                text: 'Hide',
                 variable: 'show_image',
                 value: 'hide',
             },
@@ -243,6 +243,7 @@ module.exports = {
 // CHANGES
 // I moved lists ids: 6. 7 and 8 to render the images between the show time and weather component
 // I needed to create 3 new conditions to render the images based on show_image and location
+// I changed the text "Show time" to "Show" to replicate figma
 
 // Initially, it was rendering the images in a different order, then figma
 // Initially, it showed all images regardless of location

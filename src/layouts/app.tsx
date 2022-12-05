@@ -26,7 +26,7 @@ const App = () => {
             }
         }
         catch(error) {
-            setError(error.message);
+            setError(error.response.data.error);
         }
     }
 
@@ -69,7 +69,7 @@ const App = () => {
                     )
                 })
                 :
-                <p>Loading screen</p>
+                null
             }
         </div>
     );
